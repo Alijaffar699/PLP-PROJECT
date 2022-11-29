@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<title> Responsive Login and Signup Form </title>-->
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/login.css">
+                
+        <!-- Boxicons CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+              			  
+    </head>
+    <body> 
+	<form  id="login" action="main.html" method="GET">
+	 
+        <section class="container forms">
+            <div class="form login">
+                <div class="form-content">
+                    <header>Login</header>
+                    <form>
+                        <div class="field input-field">
+                            <input type="email" placeholder="Email" class="form-control" id="inputEmail" required>
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" placeholder="Password" class="form-control" id="inputPassword" required>
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+                        <div class="form-link">
+                            <a href="#" class="forgot-pass">Forgot password?</a>
+                        </div>
+
+                        <div class="field button-field">
+                            <button id="login">Login</button>
+                        </div>
+                    </form>
+
+                    <div class="form-link">
+                        <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="media-options">
+                    <a href="#" class="field github">
+                        <img src="img/github.png" alt="" class="github-img">
+                        <span>Login with Github</span>
+                    </a>
+                </div>
+
+                <div class="media-options">
+                    <a href="#" class="field google">
+                        <img src="img/google.jpg" alt="" class="google-img">
+                        <span>Login with Google</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Signup Form -->
+            <div class="form signup">
+                <div class="form-content">
+                    <header>Signup</header>
+                    <form action="main.html" method="GET">
+                        <div class="field input-field">
+                            <input type="email" placeholder="Email" id="inputemail" required>
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" placeholder="Create password" required>
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" placeholder="Confirm password" required>
+                        </div>
+
+                        <div class="field button-field">
+                            <button>Signup</button>
+                        </div>
+                    </form>
+
+                    <div class="form-link">
+                        <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="media-options">
+                    <a href="#" class="field github">
+                        <img src="img/github.png" alt="" class="github-img">
+                        <span>Login with Github</span>
+                    </a>
+                </div>
+
+                <div class="media-options">
+                    <a href="#" class="field google">
+                        <img src="img/google.jpg" alt="" class="google-img">
+                        <span>Login with Google</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- JavaScript -->
+		<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCb31AIgNFXb0O7RubzIsYm84bQygQoGkQ",
+    authDomain: "signinsignup-3900c.firebaseapp.com",
+    projectId: "signinsignup-3900c",
+    storageBucket: "signinsignup-3900c.appspot.com",
+    messagingSenderId: "276126205860",
+    appId: "1:276126205860:web:0d175fc1bdab311bfaa331",
+    measurementId: "G-Y8NCZ7VVVG"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+        <script src="js/login.js"></script>
+    </body>
+</html>
