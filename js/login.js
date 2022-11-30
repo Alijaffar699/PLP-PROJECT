@@ -1,30 +1,19 @@
-const forms = document.querySelector(".forms"),
-      pwShowHide = document.querySelectorAll(".eye-icon"),
-      links = document.querySelectorAll(".link");
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyA046CRM8E9JirjAZxZ-XWpSq4TtzHlpBg",
+  authDomain: "geeks-526b7.firebaseapp.com",
+  projectId: "geeks-526b7",
+  storageBucket: "geeks-526b7.appspot.com",
+  messagingSenderId: "1034722532264",
+  appId: "1:1034722532264:web:28f1a6fb010d5fe3911b9d",
+  measurementId: "G-SKTLYXST6W"
+};
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-pwShowHide.forEach(eyeIcon => {
-    eyeIcon.addEventListener("click", () => {
-        let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
-        
-        pwFields.forEach(password => {
-            if(password.type === "password"){
-                password.type = "text";
-                eyeIcon.classList.replace("bx-hide", "bx-show");
-                return;
-            }
-            password.type = "password";
-            eyeIcon.classList.replace("bx-show", "bx-hide");
-        })
-        
-    })
-})      
+//Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
-links.forEach(link => {
-    link.addEventListener("click", e => {
-       e.preventDefault(); //preventing form submit
-       forms.classList.toggle("show-signup");
-    })
-})
+const auth = firebase.auth();
 
 //Signup Function
 let signUpButton = document.getElementById("signup");
@@ -100,3 +89,4 @@ auth.onAuthStateChanged(function (user) {
     //no user signed in
   }
 });
+
