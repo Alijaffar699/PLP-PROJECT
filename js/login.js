@@ -57,7 +57,7 @@ signInButton.addEventListener("click", (e) => {
       // Signed in
       var user = userCredential.user;
       console.log("user", user.email);
-      window.location = "index.html";
+      window.location = "main.html";
     })
     .catch((error) => {
       var errorCode = error.code;
